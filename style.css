@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --clr-primary-dark-cyan: hsl(158, 36%, 37%);
+    --clr-primary-very-dark-cyan: hsl(158, 36%, 15%);
+    --clr-primary-cream: hsl(30, 38%, 92%);
+
+    --clr-neutral-very-dark-blue: hsl(212, 21%, 14%);
+    --clr-neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+
+    --ff-accent: "Fraunces", serif;
+    --ff-base: "Montserrat", sans-serif;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+}
+
+h1 {
+    line-height: 1;
+}
+
+body {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 0.875rem;
+    color: var(--clr-neutral-dark-grayish-blue);
+    background-color: var(--clr-primary-cream);
+
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    margin: 2rem;
+}
+
+.product {
+    background-color: var(--clr-neutral-white);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: grid;
+    max-width: 600px;
+}
+
+.product__content {
+    padding: 1.3rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.product__category {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-size: 0.8100rem;
+}
+
+.product__title {
+    font-size: 2rem;
+    font-family: var(--ff-accent);
+    color: var(--clr-neutral-very-dark-blue);
+}
+
+.flex-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.product__price {
+    font-size: 2rem;
+    font-family: var(--ff-accent);
+    color: var(--clr-primary-dark-cyan);
+}
+
+.product__original-price {
+    text-decoration: line-through;
+}
+
+.button {
+    background-color: var(--clr-primary-dark-cyan);
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    border: none;
+    font-family: var(--ff-base);
+    color: var(--clr-neutral-white);
+    font-weight: var(--fw-bold);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+}
+
+.button:hover {
+    background-color: var(--clr-primary-very-dark-cyan);
+}
+
+@media (min-width: 600px) {
+    .product {
+        grid-template-columns: 1fr 1fr;
+    }
+}
